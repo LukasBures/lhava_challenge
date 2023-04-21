@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "lhava-challenge"
+version = "0.1.0"
+description = ""
+authors = ["Lukas Bures <burylukas@seznam.cz>"]
+readme = "README.md"
+packages = [{include = "lhava_challenge"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "^2.0.0"
+openpyxl = "^3.1.2"
+memory-profiler = "^0.61.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
