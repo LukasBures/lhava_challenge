@@ -6,9 +6,7 @@ import pandas as pd
 # Updated: the column names were changed to the provided data_2.xlsx
 
 
-def calc_pnl(
-    dfAllTnx: pd.DataFrame, wallet_address
-) -> pd.DataFrame:  # api: MagicEdenAPI):
+def calc_pnl(dfAllTnx: pd.DataFrame, wallet_address) -> pd.DataFrame:  # api: MagicEdenAPI):
 
     # NOTE: ( was missing here "pd.to_datetime(dfAllTnx"
     dfAllTnx["datetime"] = pd.to_datetime(dfAllTnx["Blocktime"] * 1000, unit="ms")
@@ -69,5 +67,6 @@ def calc_pnl(
             )
         )
     )
+    # TODO: stamp variable can be removed, it is unused.
     stamp = int(datetime.datetime.utcnow().timestamp() * 1000)
     return dfAct

@@ -11,8 +11,27 @@ python = "^3.9"
 pandas = "^2.0.0"
 openpyxl = "^3.1.2"
 memory-profiler = "^0.61.0"
-
+tqdm = "^4.65.0"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=1.1.7"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 120
+target-version = ['py39']
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | build
+  | dist
+)/
+'''
+
+[tool.isort]
+profile = "black"

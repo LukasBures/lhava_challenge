@@ -9,7 +9,7 @@ from pandas import DataFrame
 
 multiprocessing.set_start_method("fork")
 
-data: DataFrame = pd.read_excel("./part_2/data_2.xlsx")
+data: DataFrame = pd.read_excel("./data_2.xlsx")
 wallet_address: str = "Our Address"
 
 # Original code
